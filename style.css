@@ -172,3 +172,62 @@ h1 {
     border: 2px solid #ff79c6;
     box-shadow: 0 4px 15px rgba(255, 121, 198, 0.3);
 }
+/* Interactive Love Notes Styles */
+.love-notes-section {
+    margin-top: 35px;
+    border-top: 1px dashed #4a2c38;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.note-instruction {
+    font-size: 13px;
+    color: #caa6b5;
+    margin-bottom: 15px;
+}
+
+.heart-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.heart-btn {
+    width: 55px;
+    height: 55px;
+    padding: 0;
+    font-size: 24px;
+    border-radius: 50%;
+    background: #211319;
+    border: 1px solid #4a2c38;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+}
+
+.heart-btn:active {
+    transform: scale(0.9);
+}
+
+.btn-pink:active { background: #ff79c6; }
+.btn-red:active { background: #ff5555; }
+.btn-gold:active { background: #ffb86c; }
+
+.popup-box {
+    background-color: #211319;
+    border: 1px solid #ff79c6;
+    color: #f1e4e8;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(255, 121, 198, 0.2);
+}
+
+@keyframes popOpen {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+    }
