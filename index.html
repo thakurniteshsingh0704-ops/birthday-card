@@ -119,6 +119,13 @@
                 }, 5000);
             }, 300);
         }
+            function showNote(message) {
+            const popup = document.getElementById('popup-note');
+            popup.innerText = message;
+            popup.style.display = 'block';
+            popup.style.animation = 'popOpen 0.3s ease-out';
+            }
+        
     </script>
 </body>
 </html>
