@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1a0f12;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.notepad-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #2d1b22;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(243, 139, 168, 0.15);
+    overflow: hidden;
+    border: 1px solid #4a2c38;
+    z-index: 10;
+}
+
+.lock-box {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.notepad-header {
+    background-color: #211319;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #4a2c38;
+}
+
+.dots {
+    display: flex;
+    gap: 6px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.red { background-color: #ff79c6; }
+.yellow { background-color: #f1fa8c; }
+.green { background-color: #50fa7b; }
+
+.title-text {
+    color: #f8f8f2;
+    font-size: 13px;
+    margin-left: 20px;
+    letter-spacing: 0.5px;
+}
+
+.notepad-body {
+    padding: 30px 25px;
+    color: #f8f8f2;
+    line-height: 1.7;
+}
+
+.prompt-text {
+    margin-bottom: 20px;
+    color: #f1e4e8;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #211319;
+    border: 1px solid #4a2c38;
+    border-radius: 6px;
+    color: #f8f8f2;
+    font-family: inherit;
+    font-size: 16px;
+    margin-bottom: 15px;
+    outline: none;
+    text-align: center;
+}
+
+input[type="text"]:focus {
+    border-color: #ff79c6;
+}
+
+button {
+    background-color: #ff79c6;
+    color: #1a0f12;
+    border: none;
+    padding: 12px 25px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+button:active {
+    background-color: #ff92df;
+}
+
+.error-text {
+    color: #ff5555;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.date {
+    color: #caa6b5;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+h1 {
+    color: #ff79c6;
+    font-size: 22px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.message {
+    font-size: 15px;
+    margin-bottom: 35px;
+    white-space: pre-line;
+    color: #f1e4e8;
+}
+
+.signature {
+    color: #ffb86c;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.confetti-heart {
+    position: fixed;
+    top: -50px;
+    z-index: 1;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(105vh) rotate(360deg);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
