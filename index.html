@@ -100,25 +100,26 @@
             }
         }
 
+    
         function startHeartConfetti() {
-            const heartIcons = ['❤️', '💖', '💝', '🌹', '🌸', '🪻'];
-        
+            const items = ['❤️', '💖', '💝', '🌹', '🌸', '🍃'];
             setInterval(() => {
-                const heart = document.createElement('div');
-                heart.classList.add('confetti-heart');
-                heart.innerText = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+                const element = document.createElement('div');
+                element.classList.add('confetti-heart');
+                element.innerText = items[Math.floor(Math.random() * items.length)];
                 
-                heart.style.left = Math.random() * 100 + 'vw';
-                heart.style.animationDuration = (Math.random() * 3 + 2) + 's'; 
-                heart.style.fontSize = (Math.random() * 15 + 15) + 'px';
+                element.style.left = Math.random() * 100 + 'vw';
+                element.style.animationDuration = (Math.random() * 3 + 2) + 's'; 
+                element.style.fontSize = (Math.random() * 15 + 18) + 'px';
                 
-                document.body.appendChild(heart);
+                document.body.appendChild(element);
 
                 setTimeout(() => {
-                    heart.remove();
+                    element.remove();
                 }, 5000);
-            }, 300);
-        }
+            }, 250);
+                                                     }
+        
             function showNote(message) {
             const popup = document.getElementById('popup-note');
             popup.innerText = message;
