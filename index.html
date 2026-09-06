@@ -58,6 +58,17 @@
                 May this year bring you all the endless happiness, love, and laughter that you deserve. 
             </p>
             <p class="signature">Forever and always, <br> Your Husband Nitesh(Tela Kaju) 💖</p>
+                        <!-- Feature: Interactive Love Notes -->
+            <div class="love-notes-section">
+                <p class="note-instruction">Tap on the hearts for hidden notes 👇</p>
+                <div class="heart-buttons">
+                    <button class="heart-btn btn-pink" onclick="showNote('You are my favorite notification! 📱❤️')">💖</button>
+                    <button class="heart-btn btn-red" onclick="showNote('I love you more than Kaju Katli! 😋✨')">❤️</button>
+                    <button class="heart-btn btn-gold" onclick="showNote('Thank you for being my constant smile. 🥰🧿')">💝</button>
+                </div>
+                <div id="popup-note" class="popup-box" style="display: none;"></div>
+            </div>
+            
         </div>
     </div>
 
@@ -90,7 +101,8 @@
         }
 
         function startHeartConfetti() {
-            const heartIcons = ['❤️', '💖', '💝', '💕', '🌸'];
+            const heartIcons = ['❤️', '💖', '💝', '🌹', '🌸', '🪻'];
+        
             setInterval(() => {
                 const heart = document.createElement('div');
                 heart.classList.add('confetti-heart');
